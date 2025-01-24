@@ -44,6 +44,7 @@ This tab is used to display the instructions.
 
 Notes:
 There's a mechanism to ensure that files won't be overwritten. It has been tested and it seems reliable; for security reasons, it is recommended to generate the files in empty folders.
+The regex strings and formatting are not always effective, therefore, some formatting will be left to the user after the txt file is generated.
 There are multiple error checking functions in the code. If a bug persists, or the code doesn't work correctly, please debug the code or contact the developer.
 Only use decks of your own or open source ones.
 Ensure that you have Python, pandas, sqlite3 and zipfile installed.
