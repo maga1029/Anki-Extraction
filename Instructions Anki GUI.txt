@@ -1,1 +1,50 @@
-Placeholder
+Anki Extraction GUI - User Instructions
+
+Overview
+The Anki Extraction GUI provides tools for:
+
+- Extracting data from Anki database files.
+- Performing regex operations and text formatting on extracted data.
+- The interface is divided into tabs: Unzipping, Extraction, and Instructions.
+
+Tab 1: Unzipping
+This tab allows you to unzip an Anki database file and save its contents to a folder.
+
+Steps:
+1.- Select Anki Database file: Click the button to browse and choose your .apkg or .anki2 file.
+2.- Select Destination Folder: Click to specify where the extracted files should be saved.
+3.- Name of Unzipped Files Folder: Enter a name for the folder where the unzipped files will be stored.
+4.- Start Conversion: Click this button to unzip the database file and extract its contents.
+
+Tab 2: Extraction
+This tab is used to inspect and extract elements from Anki database files.
+
+File Selection
+1.- Select Anki Database Reader File: Load the unzipped .anki2 file for extraction.
+2.- Extract Database Elements: Click to display the contents of the file in the scrolled text view. The note mode directly gets you to extracting the content of the cards (the sentences). If you select the default mode, you can't go back to select the note mode and have to restart the application.
+
+Element Selection 
+Scrolled Text View: Shows raw database content from the file. Use this view to locate the indices or elements you want to extract.
+1.- First Index: Enter the starting index of the data you want to extract. 1, 2, 3 and 5 are the only ones that work.
+2.- Second Index: Enter the ending index for extraction, the number after the dot. If the index is zero or null, extraction won't work.
+3.- Select Element: Click this button to extract and display the specific data segment.
+
+Regex and Formatting
+This section is the same when using note mode.
+
+1.- Regex: Enter a regular expression pattern to apply to the data. Capturing groups must be used in all cases, and be careful with their order.
+2.- Formatting: Enter a string and enclose the capturing groups with cruled brackets, {}, enumerating them starting by zero. All values are strings, and the formatting is processed by order of capturing groups including repetitions.
+3.- Select Destination File: Choose where to save the output.
+4.- Name of the File: Specify a name for the resulting file.
+5.- Generate TXT File: Click to apply the regex and save the formatted output as a text file.
+Optional | Testing Output: Use the Test Output button to preview the results of the regex and formatting before saving.
+
+Tab 3: Instructions
+This tab is used to display the instructions.
+
+Notes:
+There's a mechanism to ensure that files won't be overwritten. It has been tested and it seems reliable; for security reasons, it is recommended to generate the files in empty folders.
+There are multiple error checking functions in the code. If a bug persists, or the code doesn't work correctly, please debug the code or contact the developer.
+Only use decks of your own or open source ones.
+Ensure that you have Python, pandas, sqlite3 and zipfile installed.
+For detailed troubleshooting, refer to the repository or the source code.
