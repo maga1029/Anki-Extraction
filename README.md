@@ -17,7 +17,7 @@ Anki-Extraction is a Python-based tool designed to assist users in extracting an
    cd Anki-Extraction
    ```
 **Install Dependencies**:
-Ensure you have Python 3 installed. All packages are included in the standard library.
+Ensure you have Python 3, pandas, sqlite3 and zipfile installed. All packages are included in the standard library.
 
 ## Usage
 The tool comprises several scripts, each serving a specific function:
