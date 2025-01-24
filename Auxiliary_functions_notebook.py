@@ -4,6 +4,7 @@ from Case_notes import f_case_notes
 from Case_query import f_case_query
 from tkinter import *
 from tkinter.messagebox import showinfo
+from tkinter.scrolledtext import ScrolledText
 
 
 def f_generate_frame_unzip(f29_notebook):
@@ -75,3 +76,18 @@ def f_generate_frame_extraction(f30_notebook):
                                                       btn_select_file, btn_main2, frame_extract_nb))
 
     f30_notebook.add(frame_extract_nb, text="Extraction")
+
+
+def f_instructions_tab(f31_notebook):
+    frame_instructions = LabelFrame(f31_notebook)
+    frame_instructions.grid(row=0, column=0)
+
+    with open("Instructions Anki GUI.txt", "r", encoding="UTF-8") as file:
+        txt_inst = file.read()
+
+    f8_scrolled_text = ScrolledText(frame_instructions, wrap="word", height=0)
+    f8_scrolled_text.insert(INSERT, txt_inst)
+    f8_scrolled_text.grid(row=0, column=0, columnspan=4)
+    f8_scrolled_text.config(state="disabled")
+
+    f31_notebook.add(frame_instructions, text="Instructions")
