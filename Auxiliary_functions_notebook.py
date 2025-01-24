@@ -85,7 +85,7 @@ def f_instructions_tab(f31_notebook):
     with open("Instructions Anki GUI.txt", "r", encoding="UTF-8") as file:
         txt_inst = file.read()
 
-    f8_scrolled_text = ScrolledText(frame_instructions, wrap="word", height=0)
+    f8_scrolled_text = ScrolledText(frame_instructions, wrap="word", height=50)
     f8_scrolled_text.insert(INSERT, txt_inst)
     f8_scrolled_text.grid(row=0, column=0, columnspan=4)
     f8_scrolled_text.config(state="disabled")
